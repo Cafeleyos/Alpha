@@ -1,0 +1,36 @@
+{
+  "name": "poob-test-first-master-training",
+  "version": "0.0.0-development",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daprieto1/POOB-TEST-FIRST-MASTER-TRAINING.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daprieto1/POOB-TEST-FIRST-MASTER-TRAINING/issues"
+  },
+  "homepage": "https://github.com/daprieto1/POOB-TEST-FIRST-MASTER-TRAINING#readme",
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "devDependencies": {
+    "semantic-release": "17.3.9"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github"
+    ]
+  }
+}
