@@ -53,9 +53,9 @@ public class MasterTraining {
      *
      * Si el plan no existe retorna null.
      * @param number
-     * @return
+     * @return the Plan
      */
-    public Plan findPlan(long number) {
+    private Plan findPlan(long number) {
         for (Plan p:plans) {
             if (p.getNumber() == number){
                 return p;
