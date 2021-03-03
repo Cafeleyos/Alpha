@@ -20,11 +20,11 @@ public class Week {
         this.plan = plan;
     }
 
-    public int averageBeats() {
-        int result = 0;
+    public double averageBeats() {
+        double result = 0;
         for (Session s : sessions) {
-            result = result + s.averageBeats();
+            result += s.averageBeats();
         }
-        return result/sessions.size();
+        return sessions.size() == 0 ? 0 : result / sessions.size();
     }
 }

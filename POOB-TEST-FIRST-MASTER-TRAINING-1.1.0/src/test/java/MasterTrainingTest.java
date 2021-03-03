@@ -81,7 +81,7 @@ public class MasterTrainingTest {
             for (int j = 0; j < (int) (Math.random() * MAX_SESSIONS + 1); j++) {
 
                 Session session = new Session();
-                if (random.nextBoolean()) {
+                if (true) {
 
                     Activity activity = new Activity();
                     for (int k = 0; k < (int) (Math.random() * MAX_RECORDS + 1); k++) {

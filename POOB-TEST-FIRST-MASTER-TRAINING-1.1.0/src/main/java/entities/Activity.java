@@ -15,11 +15,11 @@ public class Activity {
         this.records.add(record);
     }
 
-    public int averageBeats() {
-        int result = 0;
+    public double averageBeats() {
+        double result = 0;
         for(Record r : records) {
-            result = result + r.getBeats();
+            result += r.getBeats();
         }
-        return result/records.size();
+        return records.size() == 0 ? 0 : result / records.size();
     }
 }

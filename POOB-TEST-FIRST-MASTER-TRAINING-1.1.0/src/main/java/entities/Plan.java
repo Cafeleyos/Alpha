@@ -11,13 +11,21 @@ public class Plan {
     private long number;
     private String type;
     private List<Week> weeks;
+    private Cyclist cyclist;
 
     public Plan(long number) {
         this.number = number;
         this.weeks = new ArrayList<>();
     }
-    public Plan(String type, Cyclist cyclist) {
 
+    /**
+     *
+     * @param type "Heart care plan"
+     * @param cyclist
+     */
+    public Plan(String type, Cyclist cyclist) {
+        this.type = type;
+        this.cyclist = cyclist;
     }
 
     public void addWeek(Week week) {
@@ -32,11 +40,15 @@ public class Plan {
         return type;
     }
 
-    public int averageBeats() {
-        int result = 0;
+    public double averageBeats() {
+        double result = 0;
         for (Week w:weeks) {
-            result = result + w.averageBeats();
+            result += w.averageBeats();
         }
-        return result/ weeks.size();
+        return weeks.size() == 0 ? 0 : result / weeks.size();
+    }
+
+    public Cyclist getCyclist() {
+        return this.cyclist;
     }
 }

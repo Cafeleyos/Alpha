@@ -8,7 +8,8 @@ public class Session {
         this.activity = activity;
     }
 
-    public int averageBeats() {
+    public double averageBeats() {
+
         if (activity!= null) {
             return activity.averageBeats();
         }
